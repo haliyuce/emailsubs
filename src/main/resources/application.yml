@@ -8,7 +8,7 @@ spring:
         enable_lazy_load_no_trans: true
     show-sql: true
   datasource:
-    url: jdbc:mysql://35.184.35.132:3306/chelfieme
+    url: jdbc:mysql://35.229.96.245:3306/chelfieme
     username: root
     password: Chelfieme4172
     driver-class-name: com.mysql.jdbc.Driver
