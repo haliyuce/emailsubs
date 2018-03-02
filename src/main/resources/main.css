@@ -1,0 +1,62 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+section {
+ border-bottom: 1px solid #ecebeb;
+}
+#first {
+  background-image: url("img/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#first img {
+  max-height: 3rem;
+}
+
+#first h1, #first h2 {
+  letter-spacing: -0.1rem;
+  margin-bottom: 2.5rem;
+}
+
+#first h2 {
+  font-size: 1.25rem;
+  color: #5b6971;
+}
+
+#first .button {
+  padding: 1.3em;
+  font-size: 0.9rem;
+  color: #343940;
+  border-color: #343940;
+  border-radius: 0px;
+}
+
+#fourth img{
+  margin-bottom: -5px;
+}
+
+#fifth.hero {
+  padding: 3rem 1.5rem;
+}
+
+#fifth a img {
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.9rem;
+  color: #343940;
+  letter-spacing: -0.1rem;
+  margin-bottom: 0.8rem;
+}
+p {
+  color: #5b6971;
+}
+
+.has-vertically-aligned-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

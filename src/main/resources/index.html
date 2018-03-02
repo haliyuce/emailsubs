@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChelfieMe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <script type="text/javascript">
+		function subscribe() {
+			var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+			xmlhttp.open("POST", "http://35.188.228.64/email");
+			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			var reqObj = {'email':''};
+			reqObj['email'] = document.getElementById("email").value;
+			xmlhttp.send(JSON.stringify(reqObj));
+
+			if (xmlhttp.status == 0) {
+				document.getElementById("subs").style.display = "none";
+				document.getElementById("email").style.display = "none";
+				document.getElementById("final").style.display = "";
+			}
+		}
+	</script>
+  </head>
+  <body>
+    <section id="first" class="hero is-fullheight">
+      <div class="hero-head">
+        <header class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item">
+                <img src="/img/logo.png" alt="Logo">
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            ChelfieMe - It's the Changing Room Selfie App!
+          </h1>
+          <h2>
+            Get real time feedback on what to wear from your <br /> friends or from other ChelfieMe users!
+          </h2>
+          <a class="button" href="#second">EXPLORE</a>
+        </div>
+      </div>
+    </section>
+    <section id="second" class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <img src="/img/easy.jpg" class="is-pulled-left">
+            </div>
+            <div class="column is-two-fifths has-vertically-aligned-content">
+              <h3>Our app is easy.</h3>
+              <p>Upload photos to ask advice on whether your outfit is a Go or a No-or upload 2 looks to find out which one is better.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="third" class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-two-fifths has-vertically-aligned-content">
+              <h3>Shy?</h3>
+              <p>Don't worry we get it.  Post your pics anonymously for genuine unbiased feedback on what to wear on that first date, job interview, or just brunching on a Saturday.</p>
+            </div>
+            <div class="column">
+              <img src="/img/shy.jpg" class="is-pulled-right">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="fourth" class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h3>Guys</h3>
+          <p>Need fashion tips on what to wear for that date with the person of your dreams? Ask ChelfieMe.</p>
+        </div>
+      </div>
+      <div class="hero-foot has-text-centered">
+        <img src="/img/decide.jpg">
+      </div>
+    </section>
+    <section id="fifth" class="hero">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h3>Coming Soon!</h3>
+          <h2 style="padding-bottom: 3em;">Want to receive ChelfieMe updates?</h2>
+          <input type="text" id="email" placeholder="Please enter your email to subscribe" style="
+              padding: .65em;
+              font-size: 1rem;
+              color: #343940;
+              border-radius: 0px;
+              width: 20em;
+          ">
+          <h3 style="display: none;" id="final">✓  Thank you. Stay tuned for the updates ...</h3>
+          <a id="subs" class="button" href="javascript:subscribe();" style="
+              padding: 1.3em;
+              font-size: 1rem;
+              color: #343940;
+              border-color: #343940;
+              border-radius: 0px;
+          ">NOTIFY</a>
+        </div>
+      </div>
+    </section>
+    <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
