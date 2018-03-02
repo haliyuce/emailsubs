@@ -11,7 +11,7 @@
     <script type="text/javascript">
 		function subscribe() {
 			var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-			xmlhttp.open("POST", "http://35.188.228.64/email");
+			xmlhttp.open("POST", "/email");
 			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 			var reqObj = {'email':''};
 			reqObj['email'] = document.getElementById("email").value;
